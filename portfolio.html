@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Talha Zafar – Flutter and Kotlin Developer for Hire</title>
+<meta name="description" content="Talha Zafar builds and launches Flutter and native Android apps. See recent work and send a project brief.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+<script>document.documentElement.className='js'</script>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light;
+--bg:#FBF6E8;--sf:#FFFDF7;--ink:#1E2937;--mu:#4B5563;--ln:#EADFC8;--am:#F5B83D;--as:#FED991;--bl:#043077;--fl:#3CBDF6;--kt:#F86D20;--pu:#5451BA;--nv:#14213D;
+--flb:#DDF1FD;--flr:#9ED8F5;--ktb:#FFE6D8;--ktr:#F9B58C;--amb:#FFF1CF;--amr:#F5D488}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--bg)}
+a{color:var(--bl)}:focus-visible{outline:3px solid var(--bl);outline-offset:3px;border-radius:6px}
+h1,h2,h3,h4,.hf{font-family:'Space Grotesk',Inter,sans-serif;margin:0}
+.w{max-width:1100px;margin:0 auto;padding:0 24px;position:relative}
+#pg{position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);height:4px;background:var(--am);transform:scaleX(0);transform-origin:left;z-index:50}
+#cur{position:fixed;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border:2px solid var(--am);border-radius:50%;pointer-events:none;z-index:80;opacity:0;transition:width .2s,height .2s,margin .2s,background .2s}
+#cur.h{width:58px;height:58px;margin:-29px 0 0 -29px;background:rgba(245,184,61,.28)}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:70}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(251,246,232,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--ln)}
+header .w{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{font-weight:700;font-size:20px;text-decoration:none;color:var(--ink);white-space:nowrap}.logo i{font-style:normal;color:var(--am)}
+nav{display:flex;align-items:center;gap:20px;font-weight:500;font-size:15px}nav>a:not(.btn){color:var(--ink);text-decoration:none}nav>a:not(.btn):hover{text-decoration:underline;text-decoration-color:var(--am);text-decoration-thickness:3px;text-underline-offset:6px}
+@media(max-width:760px){nav>a:not(.btn){display:none}}
+.btn{display:inline-block;padding:14px 26px;border-radius:99px;font:600 16px Inter,sans-serif;text-decoration:none;border:2px solid var(--ink);color:var(--ink);background:none;cursor:pointer;transition:transform .15s,box-shadow .2s}
+.btn:hover{box-shadow:0 8px 18px rgba(30,41,55,.18)}.btn.p{background:var(--am);border-color:var(--am)}.btn.sm{padding:8px 18px;font-size:15px}
+/* hero */
+.hero{position:relative;overflow:hidden;padding:44px 0 72px}
+.hero .w{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.av{display:inline-flex;align-items:center;gap:10px;background:var(--sf);border:2px solid var(--ln);border-radius:99px;padding:6px 16px;font-size:15px;font-weight:500;margin-bottom:20px}.av i{width:10px;height:10px;border-radius:50%;background:var(--am);animation:pl 1.8s infinite}
+@keyframes pl{0%{box-shadow:0 0 0 0 rgba(245,184,61,.7)}100%{box-shadow:0 0 0 12px rgba(245,184,61,0)}}
+h1{font-size:clamp(46px,7vw,84px);line-height:1;letter-spacing:-.025em;font-weight:700}h1 mark{background:linear-gradient(transparent 62%,var(--am) 62%);color:inherit;padding:0 4px;margin:0 -4px}
+.sub{font-size:20px;color:var(--mu);max-width:36ch;margin:22px 0 18px}
+.type{font-size:clamp(18px,2.2vw,22px);font-weight:600;min-height:36px;margin-bottom:24px}.type #tw{color:var(--bl)}.type i{display:inline-block;width:3px;height:1em;background:var(--am);vertical-align:-3px;margin-left:3px;animation:bk 1s steps(1) infinite}
+@keyframes bk{50%{opacity:0}}.btns{display:flex;flex-wrap:wrap;gap:12px}
+.stage{position:relative;height:540px;perspective:1100px}
+.phone{position:absolute;left:50%;top:50%;width:250px;height:500px;margin:-250px 0 0 -125px;border-radius:44px;background:var(--nv);padding:11px;box-shadow:0 34px 60px rgba(20,33,61,.32);transform:rotateY(calc(var(--ry,0)*1deg)) rotateX(calc(var(--rx,0)*1deg));transition:transform .18s;cursor:pointer;z-index:2}
+.scr{height:100%;border-radius:34px;overflow:hidden;background:var(--sf);display:flex;flex-direction:column}.scr.sw{animation:sw .45s}@keyframes sw{from{opacity:0;transform:translateX(26px)}}
+.art{flex:0 0 46%;display:flex;align-items:center;justify-content:center;font:700 96px 'Space Grotesk',sans-serif;color:#fff}
+.bd{padding:18px}.bd h4{font-size:24px}.bd small{color:var(--mu);font-size:14px}
+.ln{height:9px;border-radius:5px;background:var(--ln);margin:12px 0 0}.ln.s{width:70%}.ln.m{width:85%}.mc{display:flex;gap:6px;margin-top:16px;flex-wrap:wrap}
+#dots{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:center;gap:8px;z-index:6}
+.dot{width:12px;height:12px;border-radius:50%;border:2px solid var(--ink);background:none;padding:0;cursor:pointer}.dot.on{background:var(--am);border-color:var(--am);transform:scale(1.3)}
+.dr{position:absolute;left:0;top:0;cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none;z-index:5}.dr.grab{cursor:grabbing}
+.bob{display:block;animation:bob 4s ease-in-out infinite}.dr:nth-child(3n) .bob{animation-delay:-1.4s}.dr:nth-child(3n+1) .bob{animation-delay:-2.6s}
+@keyframes bob{50%{transform:translateY(-8px) rotate(2deg)}}.grab .bob{animation-play-state:paused;transform:scale(1.1)}
+.tag{display:inline-block;padding:7px 16px;border-radius:99px;border:1px solid var(--amr);background:var(--amb);color:var(--ink);font:500 15px/1.4 Inter,sans-serif;white-space:nowrap}
+.tag.fl{background:var(--flb);border-color:var(--flr)}.tag.kt{background:var(--ktb);border-color:var(--ktr)}.big{font-size:17px;padding:10px 20px;box-shadow:0 6px 14px rgba(30,41,55,.12)}
+button.tag{cursor:pointer}button.tag:hover{border-color:var(--ink);transform:translateY(-2px)}button.tag[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.hint{position:absolute;left:0;right:0;bottom:28px;text-align:center;font-size:14px;color:var(--mu);pointer-events:none}
+@media(max-width:860px){.hero .w{grid-template-columns:1fr}.stage{height:500px}.phone{transform:scale(.88) rotateY(calc(var(--ry,0)*1deg))}}
+.mq{overflow:hidden;background:var(--nv);padding:16px 0}.tr{display:flex;gap:14px;width:max-content;animation:mq 34s linear infinite}.mq:hover .tr{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}.mq .tag{background:transparent;color:#F3EEE0;border-color:#3B4A66}.mq .tag.fl{border-color:var(--fl)}.mq .tag.kt{border-color:var(--kt)}
+section{padding:84px 0}h2{font-size:clamp(34px,5vw,50px);line-height:1.08;letter-spacing:-.02em}
+h2::after{content:"";display:block;width:0;height:6px;border-radius:3px;background:var(--am);margin-top:14px;transition:width .8s .25s}h2.in::after{width:64px}
+.js .rv{opacity:0}.js .rv.in{animation:pop .75s cubic-bezier(.2,.9,.3,1.25) both;animation-delay:calc(var(--i,0)*80ms)}.js .rv.done{animation:none;opacity:1}
+@keyframes pop{0%{opacity:0;transform:translateY(36px) scale(.86)}100%{opacity:1;transform:none}}
+.lead{font-size:19px;max-width:58ch;margin:26px 0 0}
+.ab{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.stats{display:grid;gap:14px}.stat{background:var(--sf);border:2px solid var(--ln);border-left:8px solid var(--am);border-radius:18px;padding:14px 22px;display:flex;align-items:baseline;gap:16px;transition:transform .2s}.stat:hover{transform:translateX(8px)}
+.stat b{font:700 50px/1 'Space Grotesk',sans-serif;min-width:92px}.stat span{color:var(--mu);font-size:15px;line-height:1.35}
+@media(max-width:820px){.ab{grid-template-columns:1fr}}
+.sv{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.tile{background:var(--sf);border:2px solid var(--ln);border-radius:22px;padding:24px;cursor:pointer;text-align:left;font:inherit;color:inherit;display:flex;flex-direction:column;gap:8px;transition:transform .25s cubic-bezier(.2,.9,.3,1.4),box-shadow .25s,border-color .2s}
+.tile:hover{transform:translateY(-8px) scale(1.03);border-color:var(--ink);box-shadow:8px 10px 0 var(--am)}
+.tile h3{font-size:22px}.tile p{margin:0;color:var(--mu);font-size:16px}.tile em{font-style:normal;font-weight:600;color:var(--bl);margin-top:auto;padding-top:8px}
+@media(max-width:900px){.sv{grid-template-columns:1fr 1fr}}@media(max-width:600px){.sv{grid-template-columns:1fr}}
+.sk{color:var(--mu);margin:20px 0 22px}.sr{display:grid;grid-template-columns:210px 1fr;gap:12px 20px;padding:18px 0;border-top:2px solid var(--ln);align-items:start}.sr b{font:700 19px 'Space Grotesk',sans-serif}
+.chips{display:flex;flex-wrap:wrap;gap:8px}@media(max-width:640px){.sr{grid-template-columns:1fr}}
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:30px;color:var(--mu);font-size:16px}.edu b{display:block;color:var(--ink);font:700 19px 'Space Grotesk',sans-serif;margin-bottom:4px}@media(max-width:640px){.edu{grid-template-columns:1fr}}
+#sts{display:flex;gap:14px;align-items:center;flex-wrap:wrap;color:var(--mu);margin:0 0 22px;min-height:52px}#clr{display:none;padding:8px 18px}
+.ctl{display:flex;gap:10px;margin-left:auto}.ctl button{width:46px;height:46px;border-radius:50%;border:2px solid var(--ink);background:var(--sf);font-size:20px;cursor:pointer;color:var(--ink)}
+#trk{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 24px 34px;margin:0 -24px;scrollbar-width:thin;cursor:grab}#trk.dg{scroll-snap-type:none;cursor:grabbing;scroll-behavior:auto}
+.card{flex:none;width:310px;height:440px;scroll-snap-align:start;perspective:1000px;transition:opacity .3s,filter .3s;outline-offset:6px}.card.dim{opacity:.28;filter:grayscale(.7)}
+.in2{position:relative;height:100%;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.8,.2,1)}.card.fp .in2{transform:rotateY(180deg)}
+.fc,.bk{position:absolute;inset:0;border-radius:24px;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden;background:var(--sf);border:2px solid var(--ln);display:flex;flex-direction:column}
+.bk{transform:rotateY(180deg);padding:22px;gap:10px;overflow:auto}.fc .art{flex:0 0 44%;font-size:110px}.fc .bd{display:flex;flex-direction:column;gap:6px;flex:1}.fc .chips{margin-top:auto}.fc small{font-size:15px}.hint2{font-size:13px;color:var(--mu)}
+.bk h3{font-size:25px}.bk p{margin:0;font-size:15.5px;color:var(--mu)}.bk ul{margin:0;padding-left:20px;font-size:15.5px}.bk a{font-weight:600}.bk .ask{margin-top:auto}
+/* hire */
+.ct{background:var(--nv);color:#F3EEE0;position:relative;overflow:hidden}.ct h2{color:#F3EEE0}.ct .lead{color:#D6DCE6}
+.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;margin-top:34px;align-items:start}@media(max-width:900px){.hg{grid-template-columns:1fr}}
+.fm{display:grid;gap:18px}.fm label,.fm .lb{font:700 16px 'Space Grotesk',sans-serif;display:block;margin-bottom:8px}
+.ct .tg{background:transparent;color:#F3EEE0;border:1px solid #3B4A66;border-radius:99px;padding:9px 18px;font:500 15px Inter,sans-serif;cursor:pointer;transition:transform .2s cubic-bezier(.2,.9,.3,1.5),background .2s}.ct .tg:hover{transform:translateY(-3px) scale(1.04);border-color:var(--am)}
+.ct .tg[aria-pressed=true]{background:var(--am);color:var(--ink);border-color:var(--am);transform:scale(1.06)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:560px){.row2{grid-template-columns:1fr}}
+.ct input,.ct textarea{width:100%;box-sizing:border-box;background:#1D2C4A;border:2px solid #3B4A66;border-radius:12px;color:#F3EEE0;padding:12px 14px;font:16px Inter,sans-serif}.ct textarea{min-height:110px;resize:vertical}.ct input:focus,.ct textarea:focus{border-color:var(--am);outline:none}
+.ct ::placeholder{color:#93A0B5}
+.pv{background:#0E1830;border:2px dashed #3B4A66;border-radius:18px;padding:18px 20px}.pv b{display:block;font:700 16px 'Space Grotesk',sans-serif;margin-bottom:8px;color:var(--am)}.pv pre{margin:0;white-space:pre-wrap;font:14.5px/1.6 Inter,sans-serif;color:#D6DCE6;max-height:260px;overflow:auto}
+.acts{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.ct .btn{color:#F3EEE0;border-color:#F3EEE0}.ct .btn.p{color:var(--ink);border-color:var(--am)}.big2{padding:16px 32px;font-size:18px}
+#fs{min-height:24px;color:var(--as);font-size:15px;margin:0}
+.dc{margin-top:18px;display:grid;gap:8px}.dc a{color:var(--am);font-size:19px;word-break:break-all}.dc span{color:#D6DCE6}
+/* floating bits */
+.fh{position:fixed;right:20px;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);z-index:36;background:var(--am);color:var(--ink);border:2px solid var(--ink);padding:14px 24px;border-radius:99px;font:700 17px 'Space Grotesk',sans-serif;text-decoration:none;box-shadow:5px 5px 0 var(--ink);transform:translateY(120px) scale(.8);opacity:0;pointer-events:none;transition:transform .5s cubic-bezier(.2,.9,.3,1.5),opacity .3s}
+.fh.show{transform:none;opacity:1;pointer-events:auto;animation:wob 5s 2s infinite}.fh:hover{transform:translateY(-4px) scale(1.06)}
+@keyframes wob{0%,86%,100%{rotate:0deg}90%{rotate:-4deg}94%{rotate:4deg}97%{rotate:-2deg}}
+.ts{position:fixed;left:20px;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);z-index:36;max-width:330px;background:var(--sf);border:2px solid var(--ink);border-radius:20px;padding:18px 44px 18px 20px;box-shadow:6px 6px 0 var(--fl);display:grid;gap:8px;transform:translateY(160px);opacity:0;pointer-events:none;transition:transform .55s cubic-bezier(.2,.9,.3,1.35),opacity .3s}
+.ts.show{transform:none;opacity:1;pointer-events:auto}.ts b{font:700 18px 'Space Grotesk',sans-serif}.ts span{color:var(--mu);font-size:15px;line-height:1.45}.ts button{position:absolute;right:10px;top:10px;width:30px;height:30px;border:0;background:none;font-size:18px;cursor:pointer;color:var(--ink)}
+footer{padding:20px 0 90px;font-size:14px;color:var(--mu)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1}}
+</style>
+</head>
+<body>
+<div id="pg"></div><div id="cur"></div><canvas id="fx"></canvas>
+<header><div class="w"><a class="logo hf" href="#top"><i>&lt;/&gt;</i> Talha Zafar</a>
+<nav><a href="#services">Services</a><a href="#work">Work</a><a href="#skills">Skills</a><a class="btn p sm" href="#hire">Hire me</a></nav></div></header>
+
+<main>
+<div class="hero" id="top">
+<div class="w"><div>
+<div class="av"><i></i>Open to new projects and roles</div>
+<h1>Your app idea, <mark>shipped to the stores.</mark></h1>
+<p class="sub">I’m Talha, a Flutter and Kotlin developer. I build mobile apps for iOS and Android and take them all the way to launch.</p>
+<div class="type">Recently built: <span id="tw"></span><i></i></div>
+<div class="btns"><a class="btn p big2" href="#hire">Hire me</a><a class="btn big2" href="mailto:zafartalha062@gmail.com?subject=Project%20inquiry">Email me</a></div></div>
+<div class="stage" id="st1">
+<div class="phone" id="ph" role="button" tabindex="0" aria-label="Show the next project preview"><div class="scr" id="scr"></div></div><div id="dots"></div>
+<div class="dr" aria-hidden="true"><i class="bob tag fl big">Flutter</i></div><div class="dr" aria-hidden="true"><i class="bob tag kt big">Kotlin</i></div><div class="dr" aria-hidden="true"><i class="bob tag fl big">Dart</i></div><div class="dr" aria-hidden="true"><i class="bob tag big">Firebase</i></div><div class="dr" aria-hidden="true"><i class="bob tag kt big">Jetpack Compose</i></div><div class="dr" aria-hidden="true"><i class="bob tag big">Stripe</i></div><div class="dr" aria-hidden="true"><i class="bob tag big">BLoC</i></div>
+
+</div></div></div>
+<div class="mq" aria-hidden="true"><div class="tr" id="mq"></div></div>
+
+<section id="about"><div class="w ab"><div><h2 class="rv">Hi, I’m Talha.</h2>
+<p class="lead rv">I’m a mobile developer in Lahore, Pakistan. Over four-plus years I’ve led the build of 8+ apps in healthcare, food delivery, advertising, education, streaming and AI. Teams call me when an app has to cope with real users, real payments and a hard deadline.</p></div>
+<div class="stats"><div class="stat rv"><b data-to="4" data-suf="+">0</b><span>years building mobile apps</span></div><div class="stat rv"><b data-to="8" data-suf="+">0</b><span>apps built as lead developer</span></div><div class="stat rv"><b data-to="2">0</b><span>app stores shipped to, Google Play and the App Store</span></div></div></div></section>
+
+<section id="services" style="padding-top:20px"><div class="w"><h2 class="rv">What I can build for you</h2><p class="lead rv">Pick a card and I’ll start your project brief with it already selected.</p>
+<div class="sv" id="sv"></div></div></section>
+
+<section id="work" style="padding-top:20px"><div class="w"><div style="display:flex;align-items:flex-end;gap:16px"><h2 class="rv">Recent builds</h2><div class="ctl"><button id="pv" aria-label="Previous projects">←</button><button id="nx" aria-label="Next projects">→</button></div></div>
+<p class="sk">Drag the row sideways, then click a card to flip it.</p>
+<div id="sts" aria-live="polite"><span id="stt">Showing all 8 projects.</span><button id="clr" class="btn" type="button">Clear filter</button></div>
+<div id="trk"></div></div></section>
+
+<section id="skills" style="padding-top:20px"><div class="w"><h2 class="rv">Tools I work with</h2><p class="sk">Tap a tool to see which builds use it.</p><div id="sk"></div>
+<div class="edu"><div><b>Education</b>B.Sc. in Computer Science from the University of South Asia (2020–2024), CGPA 3.3 out of 4.0.</div><div><b>Community</b>I stay active in Flutter and mobile communities, and join SQA discussions about testing and bug reporting.</div></div></div></section>
+
+<section id="hire" class="ct"><div class="w"><h2 class="rv">Tell me what you’re building.</h2>
+<p class="lead rv">Choose what you need and add a few lines. You’ll get a ready-to-send email draft that lands in my inbox.</p>
+<div class="hg"><div class="fm">
+<div><span class="lb">I need</span><div class="chips" id="nd"></div></div>
+<div><span class="lb">Timeline</span><div class="chips" id="tl"></div></div>
+<div class="row2"><div><label for="nm">Your name</label><input id="nm" autocomplete="name" placeholder="Jane Smith"></div><div><label for="em">Your email</label><input id="em" type="email" autocomplete="email" placeholder="jane@company.com"></div></div>
+<div><label for="ms">About the project</label><textarea id="ms" placeholder="What is the app, who is it for, and what does done look like?"></textarea></div>
+<div class="acts"><button id="sd" class="btn p big2" type="button">Send brief by email</button><button id="cb" class="btn" type="button">Copy brief</button></div>
+<p id="fs" aria-live="polite"></p></div>
+<div><div class="pv"><b>Your email so far</b><pre id="pr"></pre></div>
+<div class="dc"><span>Prefer to write it yourself?</span><a href="mailto:zafartalha062@gmail.com">zafartalha062@gmail.com</a><a href="https://www.linkedin.com/in/sheikh-talha-zafar-64790125a/">LinkedIn</a><a href="https://github.com/sheikhtalhazafar">GitHub</a><span>+92 304 5303220, Lahore, Pakistan</span><button id="ce" class="btn sm" type="button" style="justify-self:start;margin-top:6px">Copy email address</button></div></div></div></div></section>
+</main>
+<footer><div class="w">Talha Zafar, mobile developer, Lahore. 2026.</div></footer>
+<a id="fh" class="fh" href="#hire">✉ Hire me</a>
+<div id="ts" class="ts" role="status"><b>Got a project in mind?</b><span>Send a quick brief. It takes about a minute.</span><a class="btn p sm" href="#hire" style="justify-self:start">Start a brief</a><button type="button" aria-label="Dismiss">✕</button></div>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches,FINE=matchMedia('(pointer:fine)').matches,MAIL='zafartalha062@gmail.com';
+const cls=s=>/Flutter|Dart/.test(s)?'fl':/Kotlin|Jetpack/.test(s)?'kt':'';
+function mk(t,c,x){const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+const rnd=n=>Math.floor(Math.random()*n);
+/* confetti */
+const fx=$('#fx'),fc=fx.getContext('2d'),COL=['#F5B83D','#3CBDF6','#F86D20','#5451BA','#FED991'];let ps=[];
+const sz=()=>{fx.width=innerWidth;fx.height=innerHeight};sz();addEventListener('resize',sz);
+function burst(x,y,n=26){if(RM)return;for(let i=0;i<n;i++){const a=Math.random()*6.28,s=3+Math.random()*6;ps.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s-3,l:55+Math.random()*35,c:COL[i%5],r:4+Math.random()*5})}}
+(function f(){fc.clearRect(0,0,fx.width,fx.height);ps=ps.filter(p=>p.l>0);ps.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.25;p.l--;fc.globalAlpha=Math.min(p.l/25,1);fc.fillStyle=p.c;fc.fillRect(p.x,p.y,p.r,p.r)});requestAnimationFrame(f)})();
+/* data */
+const NEEDS=["A Flutter app for iOS and Android","A native Android app","Payments (Stripe or Worldpay)","A Firebase or real-time backend","Fixing or refactoring an existing app","Help with a store release"];
+const TL=["As soon as possible","In 1 to 3 months","I’m flexible"];
+const SV=[["Flutter apps for iOS and Android","One codebase that reaches both stores. I’ve shipped to Google Play and the App Store.",0,"c2"],["Native Android","Kotlin and Jetpack Compose when your app needs to feel fully native.",1,"c3"],["Payments that hold up","Stripe and Worldpay checkout flows, built into apps that already take real orders.",2,"c1"],["Live, real-time features","Order tracking, chat and notifications on Firebase, with Node.js and MongoDB where needed.",3,"c4"],["Rescue a shaky app","Inherit a messy codebase, refactor it, fix the critical bugs and get a stable build out the door.",4,"c2"],["Launch support","Get the app through Google Play and the App Store, in several languages if you need them.",5,"c3"]];
+const P=[
+{n:"YumNest",t:"Food marketplace",c:["#F5B83D","#F86D20"],d:"A marketplace that links food sellers with the people ordering from them.",b:["Separate experiences for buyers and sellers","Stripe card payments and live order tracking","Ships in several languages"],s:["Flutter","Firebase","Stripe"],nd:0},
+{n:"Pharmalyfe",t:"Healthcare, UK",c:["#3CBDF6","#043077"],d:"A prescription workflow app made for a UK pharmaceutical company.",b:["Role-based access and digital signatures","Approval flow structured with Clean Architecture","Worldpay handles payments","Designed around UK healthcare rules"],s:["Flutter","Clean Architecture","Worldpay"],l:["Try the live demo","https://appetize.io/app/b_5sdsojzaf47l2mtywsp5ceskpy"],nd:2},
+{n:"Promo",t:"Advertising, Saudi Arabia",c:["#5451BA","#F86D20"],d:"An advertising platform for brands, available in English and Arabic.",b:["Rescued mid-project: I refactored a broken Flutter codebase and fixed critical bugs against a deadline","Stable builds now on Google Play and the App Store"],s:["Flutter"],l:["Visit the website","https://promoapp.co/"],nd:4},
+{n:"Mini Mentors",t:"Education",c:["#FED991","#3CBDF6"],d:"A playful learning app for toddlers and young kids.",b:["Rhymes, quizzes and bite-size lessons","Live on Google Play"],s:["Flutter"],l:["Open on Google Play","https://play.google.com/store/apps/details?id=com.vst.MiniMentors"],nd:0},
+{n:"BissiPlayer",t:"IPTV streaming",c:["#14213D","#5451BA"],d:"A video player for IPTV that runs on phones and Android TV.",b:["Handles multiple streaming protocols","Interface adapts between phone and TV","Built for smooth HD playback"],s:["Flutter","Android TV"],nd:0},
+{n:"PicknGo",t:"Delivery and logistics",c:["#F86D20","#F5B83D"],d:"Delivery software that moves restaurant orders to riders.",b:["Courier agencies take in orders and assign riders","Live statuses on Firebase: Pending, Accepted, Approved"],s:["Flutter","Firebase"],l:["Try the live demo","https://appetize.io/app/b_xix2ewi3owl7pfynzqgoum2jg4"],nd:3},
+{n:"BhaiChara",t:"Community",c:["#3CBDF6","#F5B83D"],d:"A community app built around sharing food.",b:["Backed by Firebase","Includes in-app communication"],s:["Flutter","Firebase"],l:["Try the live demo","https://appetize.io/app/b_zzywisrum4tyec5slxxde5xuci"],nd:3},
+{n:"Sphere AI",t:"AI assistant",c:["#5451BA","#3CBDF6"],d:"A chat assistant that also handles reminders, maps and your calendar.",b:["Answers use context from your tools","Maps and calendar integrations"],s:["Flutter","Maps & Calendar APIs"],nd:0}];
+const S=[["Mobile",["Flutter","Dart","Kotlin","Jetpack Compose"]],["Architecture and state",["Clean Architecture","MVVM","GetX","Provider","BLoC"]],["Backend and cloud",["Firebase","Firestore","Cloud Messaging","Node.js","Express.js","MongoDB","REST APIs"]],["Integrations",["Stripe","Worldpay","Push Notifications","Maps & Calendar APIs","PDF Generation"]],["Tools and DevOps",["Git","GitHub","GitHub Actions (CI/CD)","SourceTree"]]];
+/* physics pieces */
+function physics(box){const items=$$('#'+box.id+' .dr').map(el=>({el,x:0,y:0,vx:0,vy:0,d:0}));let z=10;
+const put=o=>o.el.style.transform=`translate(${o.x}px,${o.y}px)`,lim=o=>[Math.max(box.clientWidth-o.el.offsetWidth,0),Math.max(box.clientHeight-o.el.offsetHeight,0)];
+const clamp=o=>{const[W,H]=lim(o);o.x=Math.min(Math.max(o.x,0),W);o.y=Math.min(Math.max(o.y,0),H)};
+items.forEach((o,i)=>{const[W,H]=lim(o);o.x=W*((i*.382+.07)%1);o.y=H*((i*.618+.11)%1);put(o);let sx,sy,lx,ly,lt;
+o.el.addEventListener('pointerdown',e=>{o.d=1;o.vx=o.vy=0;const r=box.getBoundingClientRect();sx=e.clientX-r.left-o.x;sy=e.clientY-r.top-o.y;lx=o.x;ly=o.y;lt=performance.now();o.el.setPointerCapture(e.pointerId);o.el.classList.add('grab');o.el.style.zIndex=++z;burst(e.clientX,e.clientY,10)});
+o.el.addEventListener('pointermove',e=>{if(!o.d)return;const r=box.getBoundingClientRect(),nx=e.clientX-r.left-sx,ny=e.clientY-r.top-sy,n=performance.now(),dt=Math.max(n-lt,1);o.vx=(nx-lx)/dt*16;o.vy=(ny-ly)/dt*16;lx=nx;ly=ny;lt=n;o.x=nx;o.y=ny;clamp(o);put(o)});
+const up=()=>{if(!o.d)return;o.d=0;o.el.classList.remove('grab');if(performance.now()-lt>90)o.vx=o.vy=0};o.el.addEventListener('pointerup',up);o.el.addEventListener('pointercancel',up)});
+(function t(){items.forEach(o=>{if(o.d||(Math.abs(o.vx)<.05&&Math.abs(o.vy)<.05))return;o.x+=o.vx;o.y+=o.vy;const[W,H]=lim(o);if(o.x<0||o.x>W)o.vx*=-.72;if(o.y<0||o.y>H)o.vy*=-.72;clamp(o);o.vx*=.965;o.vy*=.965;put(o)});requestAnimationFrame(t)})();
+addEventListener('resize',()=>items.forEach(o=>{clamp(o);put(o)}))}
+physics($('#st1'));
+/* phone */
+let pi=0,pt;const scr=$('#scr'),dots=$('#dots'),ph=$('#ph');
+P.forEach((p,i)=>{const d=mk('button','dot');d.setAttribute('aria-label','Show '+p.n);d.onclick=()=>{show(i);auto()};dots.append(d)});
+function show(i){pi=i;const p=P[i];scr.innerHTML=`<div class="art" style="background:linear-gradient(150deg,${p.c[0]},${p.c[1]})"><span>${p.n[0]}</span></div><div class="bd"><h4>${p.n}</h4><small>${p.t}</small><div class="ln"></div><div class="ln s"></div><div class="ln m"></div><div class="mc">${p.s.slice(0,2).map(x=>`<span class="tag ${cls(x)}">${x}</span>`).join('')}</div></div>`;scr.classList.remove('sw');void scr.offsetWidth;scr.classList.add('sw');[...dots.children].forEach((d,j)=>d.classList.toggle('on',j===i))}
+function auto(){clearInterval(pt);if(!RM)pt=setInterval(()=>show((pi+1)%P.length),3200)}
+const nxt=()=>{show((pi+1)%P.length);auto()};ph.onclick=nxt;ph.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();nxt()}};show(0);auto();
+const hero=$('#top');hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;hero.style.setProperty('--mx',x*2);hero.style.setProperty('--my',y*2);ph.style.setProperty('--ry',x*28);ph.style.setProperty('--rx',-y*20)});
+hero.addEventListener('pointerleave',()=>{['--mx','--my'].forEach(k=>hero.style.removeProperty(k));ph.style.removeProperty('--ry');ph.style.removeProperty('--rx')});
+/* typewriter + marquee */
+const W=["a food marketplace","a UK healthcare app","an IPTV player","a delivery platform","an AI assistant"];let wi=0,ci=0,dl=0;const tw=$('#tw');
+(function ty(){const w=W[wi];if(RM){tw.textContent=w;return}ci+=dl?-1:1;tw.textContent=w.slice(0,ci);let t=dl?40:80;if(!dl&&ci===w.length){dl=1;t=1400}else if(dl&&ci===0){dl=0;wi=(wi+1)%W.length;t=350}setTimeout(ty,t)})();
+const M=["Flutter","Dart","Kotlin","Jetpack Compose","Firebase","Stripe","Worldpay","BLoC","GetX","Provider","Clean Architecture","REST APIs","Node.js","MongoDB","GitHub Actions"];
+[...M,...M].forEach(k=>$('#mq').append(mk('span','tag '+cls(k),k)));
+/* hire brief */
+const sel=new Set();let tlv='';const nd=$('#nd'),tl=$('#tl'),ndb=[],tlb=[];
+function tg(txt,fn){const b=mk('button','tg',txt);b.type='button';b.setAttribute('aria-pressed','false');b.onclick=fn;return b}
+NEEDS.forEach((n,i)=>{const b=tg(n,()=>{sel.has(i)?sel.delete(i):sel.add(i);sync();if(sel.has(i)){const r=b.getBoundingClientRect();burst(r.left+r.width/2,r.top,10)}});ndb.push(b);nd.append(b)});
+TL.forEach(n=>{const b=tg(n,()=>{tlv=tlv===n?'':n;sync()});tlb.push(b);tl.append(b)});
+const body=()=>{const n=$('#nm').value.trim(),e=$('#em').value.trim(),m=$('#ms').value.trim(),needs=[...sel].sort().map(i=>'- '+NEEDS[i]);
+return{subject:'Project inquiry'+(sel.size?': '+[...sel].sort().map(i=>NEEDS[i]).slice(0,2).join(' + '):''),text:`Hi Talha,\n\nI’m ${n||'[your name]'} and I’d like to talk about a project.\n\nWhat I need:\n${needs.join('\n')||'- (select above)'}\n\nTimeline: ${tlv||'(not set)'}\n\nAbout the project:\n${m||'(add a few lines above)'}\n\n${e?'You can reach me at '+e+'.':''}\n\nThanks,\n${n}`.trim()}};
+function sync(){ndb.forEach((b,i)=>b.setAttribute('aria-pressed',sel.has(i)));tlb.forEach((b,i)=>b.setAttribute('aria-pressed',TL[i]===tlv));$('#pr').textContent=body().text}
+['#nm','#em','#ms'].forEach(s=>$(s).addEventListener('input',sync));
+const fs=$('#fs');
+$('#sd').onclick=e=>{if(!sel.size&&!$('#ms').value.trim()){fs.textContent='Pick at least one option or write a line about your project first.';return}const b=body(),r=e.currentTarget.getBoundingClientRect();burst(r.left+r.width/2,r.top,40);fs.textContent='Opening your email app. Nothing is sent until you press send there.';location.href=`mailto:${MAIL}?subject=${encodeURIComponent(b.subject)}&body=${encodeURIComponent(b.text)}`};
+async function copy(t,btn,ok,back){try{await navigator.clipboard.writeText(t);btn.textContent=ok}catch(x){fs.textContent='Copying was blocked. Select the text and copy it manually.'}setTimeout(()=>btn.textContent=back,2200)}
+$('#cb').onclick=e=>copy('To: '+MAIL+'\nSubject: '+body().subject+'\n\n'+body().text,e.currentTarget,'Copied','Copy brief');
+$('#ce').onclick=e=>{burst(e.clientX,e.clientY,20);copy(MAIL,e.currentTarget,'Copied. Paste it into your email app.','Copy email address')};
+function ask(i){sel.add(i);sync();$('#hire').scrollIntoView();setTimeout(()=>{const r=ndb[i].getBoundingClientRect();burst(r.left+r.width/2,r.top+10,30)},650)}
+/* services */
+SV.forEach(([h,d,i,s])=>{const t=mk('button','tile rv');t.type='button';t.innerHTML=`<h3></h3><p></p><em>Start a brief with this</em>`;t.children[1].textContent=h;t.children[2].textContent=d;t.onclick=()=>ask(i);$('#sv').append(t)});
+/* skills + cards */
+let cur=null,drag=0;const btns=[],cards=[];
+function chip(k,go){const b=mk('button','tag '+cls(k),k);b.type='button';b.dataset.k=k;if(go)b.dataset.go=1;b.setAttribute('aria-pressed','false');btns.push(b);return b}
+S.forEach(([g,l])=>{const r=mk('div','sr rv'),c=mk('div','chips');r.append(mk('b','',g),c);l.forEach(k=>c.append(chip(k,1)));$('#sk').append(r)});
+P.forEach(p=>{const c=mk('article','card rv'),i=mk('div','in2'),f=mk('div','fc'),b=mk('div','bk'),ch=mk('div','chips');c.tabIndex=0;c.setAttribute('role','button');c.setAttribute('aria-pressed','false');c.dataset.s=p.s.join('|');c.dataset.tilt=1;
+f.innerHTML=`<div class="art" style="background:linear-gradient(150deg,${p.c[0]},${p.c[1]})"><span>${p.n[0]}</span></div>`;
+const bd=mk('div','bd');bd.append(mk('h4','',p.n),mk('small','',p.t));p.s.forEach(k=>ch.append(chip(k)));bd.append(ch,mk('div','hint2','Click to flip for details'));f.append(bd);
+b.append(mk('h3','',p.n),mk('p','',p.d));const u=mk('ul');p.b.forEach(x=>u.append(mk('li','',x)));b.append(u);
+if(p.l){const a=mk('a','',p.l[0]);a.href=p.l[1];a.target='_blank';a.rel='noopener';b.append(a)}
+const q=mk('button','btn p sm ask','Need something like this?');q.type='button';q.onclick=()=>ask(p.nd);b.append(q);
+i.append(f,b);c.append(i);$('#trk').append(c);cards.push(c);
+const flip=()=>{const o=c.classList.toggle('fp');c.setAttribute('aria-pressed',o)};
+c.addEventListener('click',e=>{if(e.target.closest('[data-k],a,.ask')||drag)return;flip()});c.addEventListener('keydown',e=>{if(e.target===c&&(e.key==='Enter'||e.key===' ')){e.preventDefault();flip()}})});
+function filt(k){cur=cur===k?null:k;let n=0;btns.forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===cur));
+cards.forEach(c=>{const m=!cur||c.dataset.s.split('|').includes(cur);c.classList.toggle('dim',!m);if(m)n++});
+$('#clr').style.display=cur?'inline-block':'none';
+$('#stt').textContent=!cur?'Showing all 8 projects.':n?`Showing ${n} of 8 projects that use ${cur}.`:`${cur} isn’t tagged on a featured build here, but I use it. Ask me about it.`}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-k]');if(!b)return;filt(b.dataset.k);if(b.dataset.go&&cur)$('#work').scrollIntoView()});
+$('#clr').onclick=()=>filt(cur);
+const trk=$('#trk');let sx=0,sl=0,down=0;
+trk.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse'||e.target.closest('a,button'))return;down=1;drag=0;sx=e.clientX;sl=trk.scrollLeft});
+addEventListener('pointermove',e=>{if(!down)return;const d=e.clientX-sx;if(Math.abs(d)>5){drag=1;trk.classList.add('dg')}if(drag)trk.scrollLeft=sl-d});
+addEventListener('pointerup',()=>{if(!down)return;down=0;trk.classList.remove('dg');setTimeout(()=>drag=0,0)});
+$('#pv').onclick=()=>trk.scrollBy({left:-330,behavior:'smooth'});$('#nx').onclick=()=>trk.scrollBy({left:330,behavior:'smooth'});
+/* reveal + counters */
+function count(el){const to=+el.dataset.to,s=el.dataset.suf||'';if(RM){el.textContent=to+s;return}const t0=performance.now();(function f(n){const k=Math.min((n-t0)/1100,1);el.textContent=Math.round(to*(1-Math.pow(1-k,3)))+s;if(k<1)requestAnimationFrame(f)})(t0)}
+$$('.rv').forEach(el=>{const sib=[...el.parentElement.children].filter(c=>c.classList.contains('rv'));el.style.setProperty('--i',Math.min(sib.indexOf(el),5));el.addEventListener('animationend',()=>el.classList.add('done'))});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);e.target.querySelectorAll('[data-to]').forEach(count)}),{threshold:.15});
+$$('.rv').forEach(el=>io.observe(el));
+/* tilt, magnetic, cursor, progress */
+if(FINE&&!RM){$$('[data-tilt],.tile').forEach(el=>{el.addEventListener('pointermove',e=>{if(el.classList.contains('tile'))return;const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;el.style.transform=`perspective(800px) rotateX(${(.5-y)*10}deg) rotateY(${(x-.5)*12}deg)`});el.addEventListener('pointerleave',()=>el.style.transform='')});
+$$('.btn').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.18}px,${(e.clientY-r.top-r.height/2)*.28}px)`});b.addEventListener('pointerleave',()=>b.style.transform='')})}
+if(FINE){const c=$('#cur');let tx=-60,ty=-60,x=tx,y=ty;addEventListener('pointermove',e=>{tx=e.clientX;ty=e.clientY;c.style.opacity=1;c.classList.toggle('h',!!e.target.closest('a,button,[data-k],.dr,.card,.phone,.tile'))});(function l(){x+=(tx-x)*.2;y+=(ty-y)*.2;c.style.transform=`translate(${x}px,${y}px)`;requestAnimationFrame(l)})()}
+const pg=$('#pg'),fh=$('#fh');addEventListener('scroll',()=>{pg.style.transform=`scaleX(${scrollY/Math.max(document.documentElement.scrollHeight-innerHeight,1)})`;fh.classList.toggle('show',scrollY>480&&!inHire)},{passive:true});
+let inHire=false;new IntersectionObserver(es=>{inHire=es[0].isIntersecting;fh.classList.toggle('show',scrollY>480&&!inHire);if(inHire)ts.classList.remove('show')},{threshold:.25}).observe($('#hire'));
+/* toast */
+const ts=$('#ts');let tdone=0;ts.querySelector('button').onclick=()=>{ts.classList.remove('show');tdone=1};ts.querySelector('a').onclick=()=>{ts.classList.remove('show');tdone=1};
+setTimeout(()=>{if(!tdone&&!inHire){ts.classList.add('show');tdone=1}},16000);
+sync();
+</script>
+</body>
+</html>
